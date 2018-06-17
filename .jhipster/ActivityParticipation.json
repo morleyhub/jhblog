@@ -1,0 +1,40 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "clockIn",
+            "otherEntityName": "clockIn",
+            "otherEntityRelationshipName": "activityParticipation"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "activity",
+            "otherEntityName": "activity",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "wechatUserId",
+            "javadoc": "参与人ID",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 128
+        },
+        {
+            "fieldName": "participationTime",
+            "javadoc": "参与时间",
+            "fieldType": "Instant"
+        }
+    ],
+    "changelogDate": "20180617013528",
+    "entityTableName": "activity_participation",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "skipClient": true
+}

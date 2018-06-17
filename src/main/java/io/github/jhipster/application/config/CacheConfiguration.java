@@ -43,6 +43,15 @@ public class CacheConfiguration {
             cm.createCache(io.github.jhipster.application.domain.Entry.class.getName() + ".tags", jcacheConfiguration);
             cm.createCache(io.github.jhipster.application.domain.Tag.class.getName(), jcacheConfiguration);
             cm.createCache(io.github.jhipster.application.domain.Tag.class.getName() + ".entries", jcacheConfiguration);
+            cm.createCache(io.github.jhipster.application.domain.ClockinSummary.class.getName(), jcacheConfiguration);
+            cm.createCache(io.github.jhipster.application.domain.Pics.class.getName(), jcacheConfiguration);
+            cm.createCache(io.github.jhipster.application.domain.Activity.class.getName(), jcacheConfiguration);
+            cm.createCache(io.github.jhipster.application.domain.Activity.class.getName() + ".activityParticipations", jcacheConfiguration);
+            cm.createCache(io.github.jhipster.application.domain.Activity.class.getName() + ".pics", jcacheConfiguration);
+            cm.createCache(io.github.jhipster.application.domain.ActivityParticipation.class.getName(), jcacheConfiguration);
+            cm.createCache(io.github.jhipster.application.domain.ActivityParticipation.class.getName() + ".clockIns", jcacheConfiguration);
+            cm.createCache(io.github.jhipster.application.domain.ClockIn.class.getName(), jcacheConfiguration);
+            cm.createCache(io.github.jhipster.application.domain.ClockIn.class.getName() + ".pics", jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }
